@@ -1,6 +1,6 @@
 #################################################
 #  Copyright (C) 2020 Sam Pickell
-#  Last Updated: Feb. 6, 2020
+#  Last Updated: Feb. 18, 2020
 #  UML COMP 5610 Computer Network and Security
 #
 #  This is a working implementation of one
@@ -18,8 +18,7 @@ def convert_M(M_List):
 
     #  Convert to bits
     for i in range(len(M_List)):
-        new_list.append("0")
-        new_list.append(format(ord(M_List[i]), 'b'))
+        new_list.append(format(ord(M_List[i]), '08b'))
 
     return "".join(new_list)
 
@@ -29,7 +28,7 @@ def convert_K(K_List):
 
     #  Convert to bits
     for i in range(len(K_List)):
-        new_list.append(format(ord(K_List[i]), 'b'))
+        new_list.append(format(ord(K_List[i]), '07b'))
         if K_List[i].count("1") % 2 == 0:
             new_list.append("0")
         else:
@@ -219,7 +218,7 @@ def S_fun(my_string):
         x_coord = int((current_block[0] + current_block[5]), 2)
         y_coord = int((Y[i][1:5]), 2)
         base_10_num = S[i][x_coord][y_coord]
-        val = str(bin(base_10_num))[2:]
+        val = format(base_10_num, '04b')
         result.append(val)
 
     return "".join(result)
