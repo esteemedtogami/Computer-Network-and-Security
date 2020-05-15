@@ -1,0 +1,8 @@
+The programs should be very straightforward to run. In addition to needing Python3, your system will need to be able to handle the Python socket and pycryptodome libraries. Please do either of the following: 
+	
+	1. Open two terminal windows, navigate to the directory where the 	   client is located in one window, and navigate to the directory 	   where the server is located in the window. Then, use the commands 	   "python3 server.py" and "python3 client.py". The server will  	   provide the hostname that the client should use to connect to, and 	   from there, the client and server will be able to send messages to 	   one another. Information like Public key is only displayed for 	   informational purposes; in a full release this would not be 		   visible.
+
+	2. Run the two files in your Python3 IDE of choice. Run the server 	   and then the client. The server will provide the hostname that the 	   client should use to connect to, and from there, the client and 	   server will be able to send messages to one another. Information 	   like Public key is only displayed for informational purposes; in a 	   full release this would not be visible.
+
+
+Please note, we have tested these two programs on both Windows, MacOS, in an IDE, and in the terminal. We noticed that it didn't run as well on MacOS, as the terminal method was slow, and the IDE method said that we were missing 'Crypto' even though it was fine in the terminal. There were no issues running this on Windows, however.
